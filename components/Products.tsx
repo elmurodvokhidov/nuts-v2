@@ -1,6 +1,5 @@
 'use client';
 
-import { useTranslations } from 'next-intl';
 import {
     Carousel,
     CarouselContent,
@@ -15,7 +14,6 @@ import { Skeleton } from './ui/skeleton';
 export default function Products() {
     const [products, setProducts] = useState<Product[]>([]);
     const [isLoading, setIsLoading] = useState(true);
-    const t = useTranslations('products');
 
     useEffect(() => {
         const fetchPosts = async () => {
