@@ -15,9 +15,13 @@ import {
 import Image from "next/image";
 import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
-import { Home, Mail, Tablet } from "lucide-react";
+import { Mail, Tablet } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
-import { GLOBAL_SERVER_URL } from "@/constants";
+import {
+    COMPANY_GMAIL,
+    COMPANY_PHONE_NUMBER,
+    GLOBAL_SERVER_URL
+} from "@/constants";
 
 const formSchema = z.object({
     email: z.string().min(2).max(50),
@@ -172,17 +176,11 @@ export default function ContactForm() {
 
             <div className="w-full lg:w-2/6 flex flex-col gap-6">
                 <div className="flex items-center gap-6">
-                    <Home strokeWidth={1} size={30} className="text-main laptop:size-9" />
-                    <div>
-                        <p className="text-white text-[17px] laptop:text-[22px]">Buttonwood, California.</p>
-                        <p className="text-gray-500 laptop:text-xl">Rosemead, CA 91770</p>
-                    </div>
-                </div>
-
-                <div className="flex items-center gap-6">
                     <Tablet strokeWidth={1} size={30} className="text-main laptop:size-9" />
                     <div>
-                        <p className="text-white text-[17px] laptop:text-[22px]">+(998) 99 438 01 10</p>
+                        <p className="text-white text-[17px] laptop:text-[22px]">
+                            {COMPANY_PHONE_NUMBER}
+                        </p>
                         <p className="text-gray-500 laptop:text-xl">{t('time')}</p>
                     </div>
                 </div>
@@ -190,7 +188,9 @@ export default function ContactForm() {
                 <div className="flex items-center gap-6">
                     <Mail strokeWidth={1} size={30} className="text-main laptop:size-9" />
                     <div>
-                        <p className="text-white text-[17px] laptop:text-[22px]">uychinuts@gmail.com</p>
+                        <p className="text-white text-[17px] laptop:text-[22px]">
+                            {COMPANY_GMAIL}
+                        </p>
                         <p className="text-gray-500 laptop:text-xl">{t('text2')}</p>
                     </div>
                 </div>

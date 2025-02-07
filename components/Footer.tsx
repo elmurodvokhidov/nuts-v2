@@ -8,6 +8,13 @@ import {
     Youtube
 } from 'lucide-react'
 import { useTranslations } from 'next-intl'
+import {
+    COMPANY_FACEBOOK,
+    COMPANY_INSTAGRAM,
+    COMPANY_LINKEDIN,
+    COMPANY_PHONE_NUMBER,
+    COMPANY_YOUTUBE
+} from '@/constants'
 
 export default function Footer() {
     const t = useTranslations("footer");
@@ -22,29 +29,29 @@ export default function Footer() {
                     alt="logo"
                 />
 
-                <p className='w-3/5 text-xl laptop:text-2xl text-main'>
+                <p className='w-full md:w-3/5 text-base sm:text-lg md:text-xl laptop:text-2xl text-main'>
                     {t("text1")}
                 </p>
             </div>
 
 
             <div className='w-full md:w-fit flex justify-between md:justify-normal items-center gap-4 laptop:gap-6'>
-                <p className='text-xl laptop:text-2xl text-main mr-10'>
-                    +(998) 99 438 01 10
+                <p className='text-base sm:text-lg md:text-xl laptop:text-2xl text-main mr-10'>
+                    {COMPANY_PHONE_NUMBER}
                 </p>
 
                 <div className='flex items-center gap-4'>
-                    <Link href="#">
-                        <Instagram strokeWidth={1.5} className='size-5 laptop:size-6 text-main' />
+                    <Link href={COMPANY_INSTAGRAM}>
+                        <Instagram strokeWidth={1.5} className='size-4 md:size-5 laptop:size-6 text-main' />
                     </Link>
-                    <Link href="#">
-                        <Facebook strokeWidth={1.5} className='size-5 laptop:size-6 text-main' />
+                    <Link href={COMPANY_FACEBOOK}>
+                        <Facebook strokeWidth={1.5} className='size-4 md:size-5 laptop:size-6 text-main' />
                     </Link>
-                    <Link href="#">
-                        <Linkedin strokeWidth={1.5} className='size-5 laptop:size-6 text-main' />
+                    <Link href={COMPANY_LINKEDIN}>
+                        <Linkedin strokeWidth={1.5} className='size-4 md:size-5 laptop:size-6 text-main' />
                     </Link>
-                    <Link href="#">
-                        <Youtube strokeWidth={1.5} className='size-5 laptop:size-6 text-main' />
+                    <Link href={COMPANY_YOUTUBE}>
+                        <Youtube strokeWidth={1.5} className='size-4 md:size-5 laptop:size-6 text-main' />
                     </Link>
                 </div>
             </div>

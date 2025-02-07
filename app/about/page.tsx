@@ -29,12 +29,12 @@ export default function Page() {
         <>
             {isLoading && <MainLoader />}
             <div className='w-full px-10 sm:px-14 md:px-32 py-28 text-white bg-black'>
-                <div className='w-full flex items-center justify-between overflow-hidden rounded-l-xl shadow-[0px_4px_15px_rgba(0,0,0,0.2)]'>
-                    <h1 className='w-1/2 text-2xl sm:text-4xl md:text-6xl laptop:text-7xl pl-10'>
+                <div className='w-full md:flex items-center justify-between overflow-hidden rounded-l-xl shadow-[0px_4px_15px_rgba(0,0,0,0.2)]'>
+                    <h1 className='w-full md:w-1/2 text-2xl sm:text-4xl md:text-6xl laptop:text-7xl pl-10'>
                         {t("title1")}
                     </h1>
 
-                    <div className='w-1/2 h-[280px] laptop:h-[380px] overflow-hidden'>
+                    <div className='w-full md:w-1/2 h-[280px] laptop:h-[380px] overflow-hidden'>
                         <img
                             src="/images/about_company.png"
                             className="size-full object-cover object-center rounded-tl-full"
@@ -57,10 +57,10 @@ export default function Page() {
                         <h1 className='text-base sm:text-lg md:text-xl laptop:text-2xl'>
                             {t("title2")}
                         </h1>
-                        <p className='text-xs sm:text-base md:text-lg laptop:text-xl text-slate-400 text-justify'>
+                        <p className='text-sm sm:text-base md:text-lg laptop:text-xl text-slate-400 text-justify'>
                             {t("des1")}
                         </p>
-                        <p className='text-lg laptop:text-xl text-slate-400 text-justify'>
+                        <p className='text-sm sm:text-base md:text-lg laptop:text-xl text-slate-400 text-justify'>
                             {t("des2")}
                         </p>
                     </div>
