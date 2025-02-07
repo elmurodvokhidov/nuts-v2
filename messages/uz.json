@@ -1,0 +1,40 @@
+{
+    "localeswitcher": {
+        "uz": "O'zbekcha",
+        "en": "Inglizcha",
+        "ru": "Ruscha",
+        "label": "Til"
+    },
+    "navbar": {
+        "link1": "bosh sahifa",
+        "link2": "biz haqimizda",
+        "link3": "mahsulotlar",
+        "link4": "murojat uchun"
+    },
+    "home": {
+        "text1": "Uychi Nuts — yuqori sifatning kafolati!"
+    },
+    "about": {
+        "title1": "Bizning kompaniya haqida",
+        "title2": "Biz butun mahalliy va xalqaro bozorlarda mijozlarimizga yuqori sifatli mahsulotlar va xizmatlarni taqdim etish orqali ishonchli hamkor sifatida tanilganmiz.",
+        "des1": "Biz xalqaro sifat standartlariga mos ravishda ishlab chiqarilgan maxsulotlarni shartnoma asosida yetkazib berish va texnik qo‘llab-quvvatlash xizmatlari taklif etamiz.",
+        "des2": "Mahsulotlarimiz ISO sertifikati va boshqa xalqaro standartlarga mos, texnologiyalarni doimiy ravishda yangilab, zamonaviy yechimlarni tatbiq qilamiz, mijozlarning individual talab va ehtiyojlariga ko‘ra mahsulotlarni tayyorlash imkoniyati mavjud, hamda ishlab chiqarishda atrof-muhitga zarar yetkazmaydigan materiallardan foydalanamiz."
+    },
+    "products": {
+        "title1": "Bizning mahsulotlarimiz"
+    },
+    "contact": {
+        "msg": "Xabar kiriting",
+        "name": "Ismingizni kiriting",
+        "email": "Elektron pochta",
+        "subject": "Mavzu",
+        "time": "Dushanba - Juma 9:00 - 18:00",
+        "text1": "Yuborish",
+        "text2": "Istalgan vaqtda bizga so'rovingizni yuboring!",
+        "successMsg": "Xabaringiz muvaffaqiyatli yuborildi!",
+        "errorMsg": "Xabar yuborilmadi. Iltimos, qayta urinib ko'ring."
+    },
+    "footer": {
+        "text1": "Manzil: Namangan Shahar Kosonsoy ko’cha"
+    }
+}

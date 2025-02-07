@@ -1,0 +1,300 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  @apply scroll-smooth;
+}
+
+body {
+  @apply bg-white min-h-screen;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 3px;
+  border-radius: 50px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #e5e7eb;
+  border-radius: 50px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #363A3D;
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 0 0% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 0 0% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 9%;
+    --secondary: 0 0% 14.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 0 0% 63.9%;
+    --accent: 0 0% 14.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+    --ring: 0 0% 83.1%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+  }
+}
+
+@layer base {
+  nav a {
+    @apply relative transition-all duration-300;
+  }
+
+  .p {
+    @apply text-base laptop:text-lg uppercase text-red-400;
+  }
+
+  .h1 {
+    @apply laptop:text-5xl md:text-4xl sm:text-3xl text-2xl font-bold tracking-wider w-full text-center text-black
+  }
+
+  .shad_textArea {
+    @apply placeholder:text-gray-500 text-white focus-visible:ring-0 focus-visible:ring-offset-0 rounded-none text-lg laptop:text-xl border border-main !important;
+  }
+
+  .shad_input {
+    @apply placeholder:text-gray-500 text-white h-11 laptop:h-12 focus-visible:ring-0 focus-visible:ring-offset-0 rounded-none text-lg laptop:text-xl border border-main !important;
+  }
+}
+
+.send_button {
+  background: linear-gradient(278.99deg, #FDBA5C -10.27%, #EBD5B7 52.97%, rgba(255, 149, 0, 0) 145.15%);
+}
+
+.navbar a:hover {
+  background: linear-gradient(278.99deg, #FDBA5C -10.27%, #EBD5B7 52.97%, rgba(255, 149, 0, 0) 145.15%);
+}
+
+.navbar a.active {
+  background: linear-gradient(278.99deg, #FDBA5C -10.27%, #EBD5B7 52.97%, rgba(255, 149, 0, 0) 145.15%);
+}
+
+.navbar a:nth-child(1) {
+  width: 400px;
+  justify-content: end;
+  padding-right: 80px;
+}
+
+.navbar a:nth-child(1):hover {
+  background: linear-gradient(262.26deg, rgba(253, 186, 92, 0.9) -9.41%, rgba(235, 213, 183, 0.9) 18.58%, rgba(255, 149, 0, 0) 88.01%);
+}
+
+.navbar a.active:nth-child(1) {
+  background: linear-gradient(262.26deg, rgba(253, 186, 92, 0.9) -9.41%, rgba(235, 213, 183, 0.9) 18.58%, rgba(255, 149, 0, 0) 88.01%);
+}
+
+.navbar a:nth-child(4) {
+  width: 400px;
+  justify-content: start;
+  padding-left: 80px;
+}
+
+.navbar a:nth-child(4):hover {
+  background: linear-gradient(-262.26deg, rgba(253, 186, 92, 0.9) -9.41%, rgba(235, 213, 183, 0.9) 18.58%, rgba(255, 149, 0, 0) 88.01%);
+}
+
+.navbar a.active:nth-child(4) {
+  background: linear-gradient(-262.26deg, rgba(253, 186, 92, 0.9) -9.41%, rgba(235, 213, 183, 0.9) 18.58%, rgba(255, 149, 0, 0) 88.01%);
+}
+
+/**
+ * THUMB
+ */
+
+.product__card__thumb {
+  -webkit-transition: height 0.5s;
+  transition: height 0.5s;
+}
+
+.product__card__thumb img {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: opacity 0.5s, -webkit-transform 0.5s;
+  transition: opacity 0.5s, -webkit-transform 0.5s;
+  transition: opacity 0.5s, transform 0.5s;
+  transition: opacity 0.5s, transform 0.5s, -webkit-transform 0.5s;
+}
+
+.product__card:hover .product__card__thumb {
+  height: 130px;
+}
+
+.product__card:hover .product__card__thumb img {
+  opacity: 0.6;
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+}
+
+/**
+ * BODY
+ */
+
+.product__card__body {
+  position: relative;
+  padding: 20px;
+  -webkit-transition: height 0.5s;
+  transition: height 0.5s;
+}
+
+.product__card:hover .product__card__body {
+  height: 250px;
+}
+
+.product__card__description {
+  line-height: 27px;
+  -webkit-transform: translateY(45px);
+  transform: translateY(45px);
+  -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+  transition: opacity 0.3s, -webkit-transform 0.3s;
+  transition: opacity 0.3s, transform 0.3s;
+  transition: opacity 0.3s, transform 0.3s, -webkit-transform 0.3s;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+
+.product__card:hover .product__card__description {
+  opacity: 1;
+  -webkit-transform: translateY(0px);
+  transform: translateY(0px);
+  -webkit-transition-delay: 0.2s;
+  transition-delay: 0.2s;
+}
+
+.about_video_container::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 25px;
+  right: -15px;
+  z-index: -1;
+  background: #2E2E2E;
+  border-radius: 27px 27px 0px 27px;
+}
+
+.three-body {
+  --uib-size: 35px;
+  --uib-speed: 0.8s;
+  --uib-color: #EBC17C;
+  position: relative;
+  display: inline-block;
+  height: var(--uib-size);
+  width: var(--uib-size);
+  animation: spin78236 calc(var(--uib-speed) * 2.5) infinite linear;
+}
+
+.three-body__dot {
+  position: absolute;
+  height: 100%;
+  width: 30%;
+}
+
+.three-body__dot:after {
+  content: "";
+  position: absolute;
+  height: 0%;
+  width: 100%;
+  padding-bottom: 100%;
+  background-color: var(--uib-color);
+  border-radius: 50%;
+}
+
+.three-body__dot:nth-child(1) {
+  bottom: 5%;
+  left: 0;
+  transform: rotate(60deg);
+  transform-origin: 50% 85%;
+}
+
+.three-body__dot:nth-child(1)::after {
+  bottom: 0;
+  left: 0;
+  animation: wobble1 var(--uib-speed) infinite ease-in-out;
+  animation-delay: calc(var(--uib-speed) * -0.3);
+}
+
+.three-body__dot:nth-child(2) {
+  bottom: 5%;
+  right: 0;
+  transform: rotate(-60deg);
+  transform-origin: 50% 85%;
+}
+
+.three-body__dot:nth-child(2)::after {
+  bottom: 0;
+  left: 0;
+  animation: wobble1 var(--uib-speed) infinite calc(var(--uib-speed) * -0.15) ease-in-out;
+}
+
+.three-body__dot:nth-child(3) {
+  bottom: -5%;
+  left: 0;
+  transform: translateX(116.666%);
+}
+
+.three-body__dot:nth-child(3)::after {
+  top: 0;
+  left: 0;
+  animation: wobble2 var(--uib-speed) infinite ease-in-out;
+}
+
+@keyframes spin78236 {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes wobble1 {
+
+  0%,
+  100% {
+    transform: translateY(0%) scale(1);
+    opacity: 1;
+  }
+
+  50% {
+    transform: translateY(-66%) scale(0.65);
+    opacity: 0.8;
+  }
+}
+
+@keyframes wobble2 {
+
+  0%,
+  100% {
+    transform: translateY(0%) scale(1);
+    opacity: 1;
+  }
+
+  50% {
+    transform: translateY(66%) scale(0.65);
+    opacity: 0.8;
+  }
+}

@@ -1,0 +1,40 @@
+{
+    "localeswitcher": {
+        "uz": "Uzbek",
+        "en": "English",
+        "ru": "Russian",
+        "label": "Language"
+    },
+    "navbar": {
+        "link1": "home",
+        "link2": "about",
+        "link3": "products",
+        "link4": "contact"
+    },
+    "home": {
+        "text1": "Uychi Nuts is a guarantee of high quality!"
+    },
+    "about": {
+        "title1": "About our company",
+        "title2": "We are known as a reliable partner throughout the domestic and international markets by providing our customers with high-quality products and services.",
+        "des1": "We offer contract supply and technical support services for products manufactured in accordance with international quality standards.",
+        "des2": "Our products are ISO certified and comply with other international standards, we constantly update technologies and implement modern solutions, we have the ability to manufacture products according to the individual requirements and needs of customers, and we use environmentally friendly materials in production."
+    },
+    "products": {
+        "title1": "Our products"
+    },
+    "contact": {
+        "msg": "Enter Message",
+        "name": "Enter your name",
+        "email": "Email",
+        "subject": "Enter Subject",
+        "time": "Monday - Friday 9:00 - 18:00",
+        "text1": "Send",
+        "text2": "Send us your query anytime!",
+        "successMsg": "Your message has been successfully sent!",
+        "errorMsg": "Failed to send your message. Please try again."
+    },
+    "footer": {
+        "text1": "Address: Namangan City, Kosonsoy Street"
+    }
+}
