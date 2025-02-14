@@ -13,6 +13,7 @@ export default function Home() {
   const t = useTranslations('home');
 
   useEffect(() => {
+    // Asosiy videoni yuklash
     const getVideo = async () => {
       try {
         const url = await getVideoByType('home');

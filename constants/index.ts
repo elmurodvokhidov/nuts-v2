@@ -10,9 +10,7 @@ export const COMPANY_PHONE_NUMBER = "+(998) 99 438 01 10";
 export const COMPANY_INSTAGRAM = "https://instagram.com";
 // Korxona facebook manzili
 export const COMPANY_FACEBOOK = "https://facebook.com";
-// Korxona facebook manzili
-export const COMPANY_LINKEDIN = "https://linkedin.com";
-// Korxona facebook manzili
+// Korxona youtube manzili
 export const COMPANY_YOUTUBE = "https://youtube.com";
 // Korxona gmail manzili
 export const COMPANY_GMAIL = "uychinuts@gmail.com";

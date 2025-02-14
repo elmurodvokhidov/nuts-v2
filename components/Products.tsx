@@ -1,5 +1,3 @@
-'use client';
-
 import {
     Carousel,
     CarouselContent,
@@ -7,24 +5,19 @@ import {
     CarouselNext,
     CarouselPrevious,
 } from "@/components/ui/carousel"
-import { useEffect, useState } from 'react';
-import { GLOBAL_SERVER_URL } from '@/constants';
 import { Skeleton } from './ui/skeleton';
 
-export default function Products() {
-    const [products, setProducts] = useState<Product[]>([]);
-    const [isLoading, setIsLoading] = useState(true);
-
-    useEffect(() => {
-        const fetchPosts = async () => {
-            const response = await fetch(`${GLOBAL_SERVER_URL}/products`);
-            const data = await response.json();
-            setProducts(data);
-            setIsLoading(false);
-        };
-
-        fetchPosts();
-    }, [])
+export default function Products({
+    products,
+    isLoading,
+}: {
+    products: Product[];
+    isLoading: boolean;
+}) {
+    const filteredProducts = products.filter((product: Product) => {
+        const regex = /\b(?:1|2)\s*-?\s*oyna\b|\boyna\s*-?\s*(?:1|2)\b/i;
+        return !regex.test(product.title);
+    });
 
     return (
         <Carousel
@@ -42,8 +35,8 @@ export default function Products() {
                             <Skeleton className="size-[320px] md:basis-1/2 lg:basis-1/3 laptop:basis-1/4" />
                         </div>
                     ) :
-                        products.length > 0 ? (
-                            products.map((product: Product, index: number) => (
+                        filteredProducts.length > 0 ? (
+                            filteredProducts.map((product: Product, index: number) => (
                                 <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3 laptop:basis-1/4 pl-10">
                                     <div className="product__card relative h-[400px] bg-main overflow-hidden rounded-2xl transition-[transform 0.3s ease, box-shadow 0.3s ease]">
                                         <header className="product__card__thumb h-[300px] overflow-hidden bg-black">

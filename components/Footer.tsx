@@ -4,14 +4,12 @@ import Link from 'next/link'
 import {
     Facebook,
     Instagram,
-    Linkedin,
     Youtube
 } from 'lucide-react'
 import { useTranslations } from 'next-intl'
 import {
     COMPANY_FACEBOOK,
     COMPANY_INSTAGRAM,
-    COMPANY_LINKEDIN,
     COMPANY_PHONE_NUMBER,
     COMPANY_YOUTUBE
 } from '@/constants'
@@ -41,16 +39,13 @@ export default function Footer() {
                 </p>
 
                 <div className='flex items-center gap-4'>
-                    <Link href={COMPANY_INSTAGRAM}>
+                    <Link href={COMPANY_INSTAGRAM} target='_blank'>
                         <Instagram strokeWidth={1.5} className='size-4 md:size-5 laptop:size-6 text-main' />
                     </Link>
-                    <Link href={COMPANY_FACEBOOK}>
+                    <Link href={COMPANY_FACEBOOK} target='_blank'>
                         <Facebook strokeWidth={1.5} className='size-4 md:size-5 laptop:size-6 text-main' />
                     </Link>
-                    <Link href={COMPANY_LINKEDIN}>
-                        <Linkedin strokeWidth={1.5} className='size-4 md:size-5 laptop:size-6 text-main' />
-                    </Link>
-                    <Link href={COMPANY_YOUTUBE}>
+                    <Link href={COMPANY_YOUTUBE} target='_blank'>
                         <Youtube strokeWidth={1.5} className='size-4 md:size-5 laptop:size-6 text-main' />
                     </Link>
                 </div>

@@ -1,16 +1,21 @@
 'use client';
 
 import MainLoader from '@/components/MainLoader';
+import { GLOBAL_SERVER_URL } from '@/constants';
 import { getVideoByType } from '@/lib/actions/video.actions';
+import { findProductByTitle } from '@/lib/utils';
 import { useTranslations } from 'next-intl';
 import { useEffect, useState } from 'react';
 
 export default function Page() {
     const [videoUrl, setVideoUrl] = useState();
+    const [products, setProducts] = useState<Product[]>([]);
     const [isLoading, setIsLoading] = useState(true);
     const t = useTranslations("about");
+    const result = findProductByTitle(products, 1);
 
     useEffect(() => {
+        // Videoni yuklash
         const getVideo = async () => {
             try {
                 const url = await getVideoByType('about');
@@ -21,8 +26,15 @@ export default function Page() {
                 setIsLoading(false);
             }
         };
-
         getVideo();
+
+        // Mahsulotlarni yuklash
+        const fetchProducts = async () => {
+            const response = await fetch(`${GLOBAL_SERVER_URL}/products`);
+            const data = await response.json();
+            setProducts(data);
+        };
+        fetchProducts();
     }, [])
 
     return (
@@ -35,10 +47,12 @@ export default function Page() {
                     </h1>
 
                     <div className='w-full md:w-1/2 h-[280px] laptop:h-[380px] overflow-hidden'>
-                        <img
-                            src="/images/about_company.png"
-                            className="size-full object-cover object-center rounded-tl-full"
-                        />
+                        {result && (
+                            <img
+                                src={result.imgUrl}
+                                className="size-full object-cover object-center rounded-tl-full"
+                            />
+                        )}
                     </div>
                 </div>
 
