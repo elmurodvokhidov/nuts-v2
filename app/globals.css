@@ -85,13 +85,16 @@ body {
 }
 
 .navbar a:hover {
-  background: linear-gradient(278.99deg, #FDBA5C -10.27%, #EBD5B7 52.97%, rgba(255, 149, 0, 0) 145.15%);
+  /* background: linear-gradient(278.99deg, #FDBA5C -10.27%, #EBD5B7 52.97%, rgba(255, 149, 0, 0) 145.15%); */
+  @apply text-white;
 }
 
 .navbar a.active {
-  background: linear-gradient(278.99deg, #FDBA5C -10.27%, #EBD5B7 52.97%, rgba(255, 149, 0, 0) 145.15%);
+  /* background: linear-gradient(278.99deg, #FDBA5C -10.27%, #EBD5B7 52.97%, rgba(255, 149, 0, 0) 145.15%); */
+  @apply text-white;
 }
 
+/* 
 .navbar a:nth-child(1) {
   width: 400px;
   justify-content: end;
@@ -118,7 +121,7 @@ body {
 
 .navbar a.active:nth-child(4) {
   background: linear-gradient(-262.26deg, rgba(253, 186, 92, 0.9) -9.41%, rgba(235, 213, 183, 0.9) 18.58%, rgba(255, 149, 0, 0) 88.01%);
-}
+} */
 
 /**
  * THUMB

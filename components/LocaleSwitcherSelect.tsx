@@ -28,7 +28,7 @@ export default function LocaleSwitcherSelect({
     }
 
     return (
-        <div className="absolute right-10">
+        <div className='absolute right-10 lg:static'>
             <Select.Root defaultValue={defaultValue} onValueChange={onChange}>
                 <Select.Trigger
                     aria-label={label}

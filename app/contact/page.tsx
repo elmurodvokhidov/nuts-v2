@@ -3,7 +3,7 @@ import { COMPANY_LOCATION } from '@/constants'
 
 export default function Page() {
     return (
-        <div className='bg-black'>
+        <div className='bg-black font-sans font-semibold'>
             {/* Umumiy qism */}
             <section className="lg:!px-32 pt-24 pb-32 px-10">
                 <iframe
