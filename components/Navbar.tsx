@@ -13,7 +13,7 @@ export default function Navbar() {
 
     return (
         <>
-            <nav className={cn(pathname === "/" ? "bg-[#222222be] backdrop-blur-lg" : "bg-black", "navbar hidden lg:flex fixed top-0 z-50 w-full px-28 xl:px-32 items-center gap-8 xl:gap-16 laptop:gap-20 font-sans shadow-[0px_4px_10px_rgba(0,0,0,0.25)]")}>
+            <nav style={{ zIndex: 100 }} className={cn(pathname === "/" ? "bg-[#222222be] backdrop-blur-lg" : "bg-black", "navbar hidden lg:flex fixed top-0 z-50 w-full px-28 xl:px-32 items-center gap-8 xl:gap-16 laptop:gap-20 font-sans shadow-[0px_4px_10px_rgba(0,0,0,0.25)]")}>
                 <Link
                     href="/"
                     className="uppercase text-3xl text-main font-bold"
